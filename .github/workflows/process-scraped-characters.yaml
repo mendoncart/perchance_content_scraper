@@ -73,8 +73,9 @@ jobs:
       - name: Create a new temporary branch from main
         run: |
           git fetch origin main
-          git checkout -b processed-batch1 origin/main
-          git push origin processed-batch1 
+          git branch processed-batch1 main  # Create the branch based on main without switching
+          git push origin processed-batch1  # Push it to the remote
+
 
       - name: Debug - List files after switching to processed-batch1
         run: ls -R
