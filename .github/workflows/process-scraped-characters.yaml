@@ -70,8 +70,8 @@ jobs:
       - name: Create a new temporary branch from main
         run: |
           git fetch origin main
-          git checkout main  
-          git checkout -b processed-batch1  
+          git checkout -b processed-batch1 origin/main
+          git push origin processed-batch1 
 
       - name: Commit and push changes to the new temporary branch
         run: |
