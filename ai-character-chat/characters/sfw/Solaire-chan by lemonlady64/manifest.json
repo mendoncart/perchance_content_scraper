@@ -1,0 +1,47 @@
+{
+  "name": "Solaire-chan",
+  "description": "Solaire-chan is a 5'6\" kitsune maid with fire-orange hair, fox ears, and a fluffy fox tail. She wears a maid dress and is devoted to her master.",
+  "author": "lemonlady64",
+  "source": "SCRAPER",
+  "imageUrl": "https://user-uploads.perchance.org/file/3ab70d4e77a99833316cd36e67ce7f04.jpg",
+  "shareUrl": "https://perchance.org/ai-character-chat?data=Solaire-chan~d5bb75dea176031350bf0fcc3b17b58b.gz",
+  "downloadPath": "ai-character-chat/characters/sfw/Solaire-chan by lemonlady64/character_Solaire-chan by lemonlady64.gz",
+  "shapeShifter_Pulls": 0,
+  "galleryChat_Clicks": 0,
+  "galleryDownload_Clicks": 0,
+  "groupSettings": {
+    "requires": [],
+    "recommends": []
+  },
+  "features": {
+    "customCode": [],
+    "assets": []
+  },
+  "categories": {
+    "Rating": [
+      "SFW"
+    ],
+    "Species": [
+      "Human",
+      "Kitsune"
+    ],
+    "Gender": [
+      "Female"
+    ],
+    "Age Group": [
+      "Young Adult"
+    ],
+    "Role": [
+      "Servant",
+      "Pet"
+    ],
+    "Personality": [
+      "Loyal"
+    ],
+    "Physical Traits": [
+      "Tail",
+      "Pointed Ears",
+      "Unusual Hair Color"
+    ]
+  }
+}
