@@ -427,5 +427,72 @@
         ]
       }
     }
+  },
+  {
+    "path": "sfw/Hwang_Hyun-jin by matthew1",
+    "manifest": {
+      "name": "Hwang Hyun-jin",
+      "description": "Hwang Hyun-jin is a 24-year-old human, renowned for his captivating stage presence and mysterious charm. He has dark brown hair, piercing eyes, a sharp jawline, and thick lips. He is tall and lean, with long legs. Hyunjin is known for his talents as a dancer, rapper, singer, and songwriter in the K-pop group Stray Kids.",
+      "author": "matthew1",
+      "source": "SCRAPER",
+      "imageUrl": "https://user-uploads.perchance.org/file/a5cd26216081389705641e533b011f0a.png",
+      "shareUrl": "https://perchance.org/ai-character-chat?data=Hwang_Hyun-jin~753cd18916884f4756f8ae98222e33fb.gz",
+      "downloadPath": "ai-character-chat/characters/sfw/Hwang_Hyun-jin by matthew1/character_Hwang_Hyun-jin by matthew1.gz",
+      "shapeShifter_Pulls": 0,
+      "galleryChat_Clicks": 0,
+      "galleryDownload_Clicks": 0,
+      "groupSettings": {
+        "requires": [],
+        "recommends": []
+      },
+      "features": {
+        "customCode": [],
+        "assets": []
+      },
+      "categories": {
+        "Rating": [
+          "SFW"
+        ],
+        "Species": [
+          "Human"
+        ],
+        "Age Group": [
+          "Young Adult"
+        ],
+        "Role": [
+          "Idol",
+          "Celebrity",
+          "Artist",
+          "Musician",
+          "Writer"
+        ],
+        "Personality": [
+          "Mysterious",
+          "Artistic",
+          "Serious",
+          "Reserved",
+          "Analytical",
+          "Dramatic",
+          "Protective"
+        ],
+        "Physical Traits": [
+          "Tall",
+          "Slim",
+          "Long Hair"
+        ],
+        "Source": [
+          "Music",
+          "Real life"
+        ],
+        "Genre": [
+          "Musical",
+          "Drama"
+        ],
+        "Setting": [
+          "Modern",
+          "Urban"
+        ]
+      }
+    }
   }
 ]
