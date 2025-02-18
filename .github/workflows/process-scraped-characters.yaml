@@ -72,10 +72,9 @@ jobs:
 
       - name: Create a new temporary branch from main
         run: |
-          git fetch --all  # Fetch all branches to avoid missing references
-          git checkout main  # Ensure we are on main before creating the branch
-          git pull origin main  # Ensure we have the latest changes
-          git checkout -b processed-batch1  # Create and switch to the new branch
+          git fetch origin main:main
+          git branch processed-batch1 main  # Create the branch without switching
+          git checkout processed-batch1 --  # Checkout but keep current working directory state
           git push origin processed-batch1  # Push the new branch to remote
 
 
