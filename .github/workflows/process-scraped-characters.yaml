@@ -67,11 +67,17 @@ jobs:
           rm -rf ai-character-char
           rm -rf ai-character-chat/characters/scrape
 
+      - name: Debug - List remaining files before creating the new branch
+        run: ls -R
+
       - name: Create a new temporary branch from main
         run: |
           git fetch origin main
           git checkout -b processed-batch1 origin/main
           git push origin processed-batch1 
+
+      - name: Debug - List files after switching to processed-batch1
+        run: ls -R
 
       - name: Commit and push changes to the new temporary branch
         run: |
