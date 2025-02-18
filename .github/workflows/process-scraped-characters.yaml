@@ -70,22 +70,38 @@ jobs:
       - name: Debug - List remaining files before creating the new branch
         run: ls -R
 
-      - name: Create a new temporary branch from main
+      # First, save the files we want to keep in a temporary location
+      - name: Save processed files to temporary location
         run: |
+          # Create a temporary directory to store our processed files
+          mkdir -p /tmp/processed_files
+          # Copy all files we want to keep to the temporary directory
+          cp -r ai-character-chat /tmp/processed_files/
+
+      # Now create and switch to the new branch
+      - name: Create and checkout new branch from main
+        run: |
+          # Fetch and checkout main branch
           git fetch origin main:main
-          git branch processed-batch1 main  # Create the branch without switching
-          git checkout processed-batch1 --  # Checkout but keep current working directory state
-          git push origin processed-batch1  # Push the new branch to remote
+          # Create and checkout new branch
+          git checkout -b processed-batch1 main
 
+      # Restore our saved files
+      - name: Restore processed files
+        run: |
+          # Copy the files back from temporary location
+          cp -r /tmp/processed_files/ai-character-chat ./
+          # Remove temporary directory
+          rm -rf /tmp/processed_files
 
-      - name: Debug - List files after switching to processed-batch1
+      - name: Debug - List restored files
         run: ls -R
 
-      - name: Commit and push changes to the new temporary branch
+      - name: Commit and push changes to the new branch
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add .  
+          git add .
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update processed files" && git push origin processed-batch1)
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_ACTIONS }}
@@ -97,7 +113,6 @@ jobs:
           if git diff --quiet origin/main origin/processed-batch1; then
             echo "No differences found between branches. Skipping PR creation."
           else
-            gh label create "automated-pr" --color 1D76DB --description "Automatic PR generated for adding content to the DB" || echo "Label 'automated-pr' already exists or can't be created."
             gh pr create \
               --base main \
               --head processed-batch1 \
