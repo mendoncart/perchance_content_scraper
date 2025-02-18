@@ -1,0 +1,17 @@
+{
+  "gemini": {
+    "dailyCalls": 2,
+    "lastReset": "2025-02-18T20:10:05.104Z",
+    "lastCall": "2025-02-18T20:10:14.038Z"
+  },
+  "pigimage": {
+    "dailyCalls": 0,
+    "lastReset": "2025-02-18T20:10:05.104Z",
+    "lastCall": "2025-02-18T20:10:05.104Z"
+  },
+  "freeimage": {
+    "dailyCalls": 0,
+    "lastReset": "2025-02-18T20:10:05.104Z",
+    "lastCall": "2025-02-18T20:10:05.104Z"
+  }
+}
