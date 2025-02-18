@@ -73,9 +73,8 @@ jobs:
       - name: Create a new temporary branch from main
         run: |
           git fetch origin main
-          git branch processed-batch1 main  # Create the branch without switching
-          git checkout processed-batch1  # Switch to the new branch but keep working directory state
-          git push origin processed-batch1  # Push the new branch to remote
+          git checkout -b processed-batch1 origin/main
+          git push origin processed-batch1 
 
       - name: Debug - List files after switching to processed-batch1
         run: ls -R
@@ -85,7 +84,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add .  
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update processed files" && git push origin processed-batch1)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update generated files" && git push origin processed-batch1)
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_ACTIONS }}
 
