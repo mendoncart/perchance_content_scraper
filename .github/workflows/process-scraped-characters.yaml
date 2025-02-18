@@ -72,9 +72,10 @@ jobs:
 
       - name: Create a new temporary branch from main
         run: |
-          git fetch origin main
-          git branch processed-batch1 main  # Create the branch based on main without switching
-          git push origin processed-batch1  # Push it to the remote
+          git fetch origin main:main  # Ensure main exists locally
+          git branch processed-batch1 main  # Create the branch without switching
+          git push origin processed-batch1  # Push it to remote
+
 
 
       - name: Debug - List files after switching to processed-batch1
